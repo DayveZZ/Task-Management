@@ -1,0 +1,7 @@
+.nav-list li {
+  cursor: pointer;
+  transition: all 0.2s ease-in;
+}
+.nav-list li:hover {
+  color: white;
+}
