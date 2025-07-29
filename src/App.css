@@ -1,7 +1,22 @@
-.nav-list li {
-  cursor: pointer;
-  transition: all 0.2s ease-in;
+@import url("https://fonts.googleapis.com/css2?family=Sacramento&display=swap");
+
+.nav-list img,
+.settings img {
+  width: 20px;
 }
-.nav-list li:hover {
+.nav-list li a,
+.settings a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 200px;
+  padding: 8px 16px;
+  border-radius: 20px;
+  transition: all 0.3 ease-in-out;
+}
+.nav-list li a:hover,
+.settings a:hover {
+  background-color: #404040;
+  box-shadow: 0 10px 15px -10px black;
   color: white;
 }

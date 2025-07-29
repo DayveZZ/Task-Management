@@ -1,15 +1,65 @@
 import React from "react";
+import { Routes, Route, Link } from "react-router";
+import Dashboard from "./Dashboard";
+import ToDo from "./ToDo";
+import Notes from "./Notes";
+import User from "./User";
+import Settings from "./Settings";
 
 const Nabar = () => {
   return (
-    <div className="navbar flex justify-between items-center bg-neutral-900 text-neutral-400 p-4 shadow-md px-20">
-      <h1>TMS</h1>
-      <ul className="nav-list flex space-x-6">
-        <li>Dashboard</li>
-        <li>ToDo</li>
-        <li>Notes</li>
-        <li>User</li>
-      </ul>
+    <div className="h-screen">
+      <div className="top-bar bg-neutral-900 py-4 px-8 absolute top-0 w-full flex items-center justify-between shadow-lg">
+        <h1 className="logo w-20">
+          <Link to="/dashboard">
+            <img src="src\assets\Task_Management_Logo.png" />
+          </Link>
+        </h1>
+        <button className="w-10 cursor-pointer">
+          <img src="src\assets\user-light.svg" alt="user" />
+        </button>
+      </div>
+
+      <div className="h-full flex shadow-lg pt-16">
+        <div className="bg-neutral-800 text-neutral-400 px-4 py-8 shadow-md gap-4 flex flex-col justify-between ">
+          <ul className="nav-list flex flex-col gap-2">
+            <li>
+              <Link to="/dashboard">
+                <img src="src\assets\home-light.svg" />
+                Dashboard
+              </Link>
+            </li>
+            <li>
+              <Link to="/todo">
+                <img src="src\assets\list-light.svg" />
+                ToDo
+              </Link>
+            </li>
+            <li>
+              <Link to="/notes">
+                <img src="src\assets\notes-light.svg" />
+                Notes
+              </Link>
+            </li>
+          </ul>
+          <button className="settings cursor-pointer">
+            <Link to="/settings">
+              <img src="src\assets\bars-light.svg" />
+              Settings
+            </Link>
+          </button>
+        </div>
+
+        <div className="content w-full p-8">
+          <Routes>
+            <Route path="/" element={<Dashboard />} />
+            <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/todo" element={<ToDo />} />
+            <Route path="/notes" element={<Notes />} />
+            <Route path="/settings" element={<Settings />} />
+          </Routes>
+        </div>
+      </div>
     </div>
   );
 };
