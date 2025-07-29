@@ -9,7 +9,7 @@ import Settings from "./Settings";
 const Nabar = () => {
   return (
     <div className="h-screen">
-      <div className="top-bar bg-neutral-900 py-4 px-8 absolute top-0 w-full flex items-center justify-between shadow-lg">
+      <div className="top-bar bg-neutral-900 py-4 px-8 fixed top-0 w-full flex items-center justify-between shadow-lg z-1 ">
         <h1 className="logo w-20">
           <Link to="/dashboard">
             <img src="src\assets\Task_Management_Logo.png" />
@@ -20,8 +20,8 @@ const Nabar = () => {
         </button>
       </div>
 
-      <div className="h-full flex shadow-lg pt-16">
-        <div className="bg-neutral-800 text-neutral-400 px-4 py-8 shadow-md gap-4 flex flex-col justify-between ">
+      <div className="">
+        <div className="bg-neutral-800 text-neutral-400 px-4 pt-24 pb-8 shadow-md gap-4 flex flex-col justify-between fixed h-full">
           <ul className="nav-list flex flex-col gap-2">
             <li>
               <Link to="/dashboard">
@@ -42,7 +42,7 @@ const Nabar = () => {
               </Link>
             </li>
           </ul>
-          <button className="settings cursor-pointer">
+          <button className="settings cursor-pointer ">
             <Link to="/settings">
               <img src="src\assets\bars-light.svg" />
               Settings
@@ -50,7 +50,7 @@ const Nabar = () => {
           </button>
         </div>
 
-        <div className="content w-full p-8">
+        <div className="content w-full pl-68 pt-24 pb-8 pr-10">
           <Routes>
             <Route path="/" element={<Dashboard />} />
             <Route path="/dashboard" element={<Dashboard />} />
