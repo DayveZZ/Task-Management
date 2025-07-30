@@ -5,16 +5,14 @@ body {
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  /* background-color: #242424; */
-  background-color: #fff;
-  color: #303030;
+  background-color: #303030;
+  height: 100vh;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-/* #1e202c */
-/* #8d1010 */
-/* #31323e */
-/* #bfc0d1 */
+body::-webkit-scrollbar {
+  display: none;
+}

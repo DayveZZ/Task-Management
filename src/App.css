@@ -1,18 +1,24 @@
 @import url("https://fonts.googleapis.com/css2?family=Sacramento&display=swap");
 
-.nav-list img,
-.settings img {
-  width: 20px;
+.search img,
+.nav-list img {
+  width: 24px;
 }
+.nav {
+  background: url("assets/bg-1.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 .nav-list li a,
 .settings a {
   display: flex;
-  align-items: center;
-  gap: 10px;
-  width: 200px;
-  padding: 8px 16px;
-  border-radius: 20px;
-  transition: all 0.3 ease-in-out;
+  /* align-items: center; */
+  gap: 1rem;
+  padding: 8px 24px;
+  border-radius: 100px;
+  transition: all 0.1s ease-in-out;
 }
 .nav-list li a:hover,
 .settings a:hover {
@@ -20,3 +26,19 @@
   box-shadow: 0 10px 15px -10px black;
   color: white;
 }
+@layer utilities {
+  .calendar-icon::-webkit-calendar-picker-indicator {
+    filter: invert(1); /* Invert icon color (e.g., from black to white) */
+  }
+}
+.todo {
+  position: absolute;
+  bottom: 50%;
+  right: 42%;
+  transform: translate(50%, 50%);
+}
+/* .select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+} */
