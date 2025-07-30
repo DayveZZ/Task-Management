@@ -31,14 +31,12 @@
     filter: invert(1); /* Invert icon color (e.g., from black to white) */
   }
 }
-.todo {
+.todos {
+  /* border: 2px solid red; */
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  left: 0;
   position: absolute;
-  bottom: 50%;
-  right: 42%;
-  transform: translate(50%, 50%);
+  background-color: rgba(0, 0, 0, 0.5);
 }
-/* .select {
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-} */
