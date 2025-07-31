@@ -1,8 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Sacramento&display=swap");
 
 .nav-list svg,
-.search svg {
+.search svg,
+.todo-utility svg {
   font-size: 1.3rem;
+  color: white;
 }
 .nav-list li a,
 .settings a {
@@ -14,7 +16,8 @@
 }
 
 .nav-list li:hover,
-.settings li:hover {
+.settings li:hover,
+.todo-utility svg:hover {
   color: #bb241c;
 }
 @layer utilities {
