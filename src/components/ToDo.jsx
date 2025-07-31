@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 const ToDo = () => {
   const [show, setShow] = useState(false);
-  const [todo, setTodo] = useState([]);
+  // const [todo, setTodo] = useState([]);
   return (
     <>
       <div className="flex justify-between items-center bg-neutral-200 text-black  px-8 py-4 rounded">
@@ -14,18 +14,20 @@ const ToDo = () => {
           Add Task
         </button>
       </div>
+
       {show && (
         <div className="todos">
-          <div className="absolute bottom-1/2 right-[43.75%] translate-x-1/2 translate-y-1/2 shadow-lg p-4 rounded-lg w-[50%] flex flex-col gap-8 border border-neutral-800 bg-neutral-600">
-            <div>
+          <div className="absolute bottom-1/2 right-[43.75%] translate-x-1/2 translate-y-1/2 shadow-lg p-8 rounded-lg w-[50%] flex flex-col gap-8 bg-neutral-950/90">
+            <div className="">
               <h2>Task Title</h2>
               <input
                 type="text"
-                className="outline-none bg-neutral-800 py-2 px-4 rounded-4xl mt-2 w-full"
+                className="outline-none bg-neutral-400 py-2 px-4 rounded-4xl mt-2 w-full"
                 placeholder="Type your task"
               />
             </div>
-            <div className="flex justify-between gap-8">
+
+            <div className="flex justify-between gap-8 ">
               <div className="w-full">
                 <h2>Select Date</h2>
                 <input
@@ -51,7 +53,8 @@ const ToDo = () => {
                 </div>
               </div>
             </div>
-            <div className="m-auto flex gap-16">
+
+            <div className="flex justify-between gap-4 ">
               <button className="cursor-pointer shadow bg-neutral-900 text-white rounded w-20 px-4 py-2 ">
                 Add
               </button>
@@ -67,7 +70,7 @@ const ToDo = () => {
       )}
 
       <div className="flex items-center justify-between bg-neutral-200 text-black p-4 rounded mt-8 h-40">
-        <div className="w-[85%] py-2 h-full rounded flex flex-col">
+        <div className="w-19/20 py-2 h-full rounded flex flex-col">
           <div className="flex items-center gap-8">
             <h3 className="bg-neutral-300  px-4 py-2 rounded">mm/dd/yyyy</h3>
             <h3 className="bg-neutral-300  px-4 py-2 rounded">High</h3>

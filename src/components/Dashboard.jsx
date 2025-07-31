@@ -10,7 +10,7 @@ const Dashboard = () => {
       </div>
 
       <div className="bg-[#404040] text-white p-4 mt-8 rounded h-40">
-        Recent To-Do
+        Recent Notes
       </div>
     </div>
   );
